@@ -7,15 +7,16 @@ import {
   Mail,
   Code,
   Github,
-  Linkedin,
   ExternalLink,
   Terminal,
+  Instagram,
 } from "lucide-react";
 import { Window } from "@/components/Window";
-
 import { Taskbar } from "@/components/Taskbar";
 import { StartMenu } from "@/components/StartMenu";
 import { DesktopIcon } from "@/components/DesktopIcon";
+import { experiences, contactLinks } from "@/lib/data";
+import { projects } from "@/lib/projects";
 
 interface WindowState {
   id: string;
@@ -184,27 +185,27 @@ export default function Home() {
       >
         <div className="space-y-[16px]">
           <h1 className="text-[24px] font-bold border-b pb-[8px]">
-            Hello, Im a Web Developer
+            Work Experience
           </h1>
-          <p>
-            Welcome to my Windows XP themed portfolio! Im a passionate developer
-            who loves building nostalgic yet modern web experiences.
-          </p>
-          <div className="bg-[#ffffcc] p-[16px] border border-black/10 shadow-sm italic">
-            The best way to predict the future is to invent it. - Alan Kay
+          <div className="space-y-[24px]">
+            {experiences.map((exp, idx) => (
+              <div key={idx} className="border-l-2 border-xp-blue pl-[16px]">
+                <h3 className="font-bold text-xp-blue-dark text-[16px]">
+                  {exp.role}
+                </h3>
+                {exp.company && (
+                  <p className="text-xp-green font-bold text-[14px]">
+                    {exp.company}
+                  </p>
+                )}
+                <p className="text-[12px] text-gray-500 mb-[8px]">{exp.date}</p>
+                <p className="text-[14px]">{exp.description}</p>
+              </div>
+            ))}
           </div>
-          <p>
-            I specialize in React, TypeScript, and Tailwind CSS. I enjoy the
-            challenge of creating pixel-perfect designs and smooth user
-            interactions.
-          </p>
-          <div className="flex gap-[16px] pt-[16px]">
-            <button className="flex items-center gap-[8px] px-[16px] py-[8px] bg-xp-blue text-white rounded-sm hover:brightness-110">
-              <Github size={18} /> GitHub
-            </button>
-            <button className="flex items-center gap-[8px] px-[16px] py-[8px] bg-[#0077b5] text-white rounded-sm hover:brightness-110">
-              <Linkedin size={18} /> LinkedIn
-            </button>
+
+          <div className="bg-[#ffffcc] p-[16px] border border-black/10 shadow-sm italic mt-[24px]">
+            The best way to predict the future is to invent it. - Alan Kay
           </div>
         </div>
       </Window>
@@ -260,25 +261,75 @@ export default function Home() {
         icon={<Folder size={14} />}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px]">
-          {[1, 2, 3, 4].map((i) => (
+          {projects.map((project) => (
             <div
-              key={i}
-              className="border border-black/10 p-[12px] hover:bg-xp-blue/5 group cursor-pointer"
+              key={project.id}
+              className="border border-black/10 p-[12px] hover:bg-xp-blue/5 group flex flex-col h-full bg-white"
             >
-              <div className="w-full h-[128px] bg-gray-200 mb-[8px] overflow-hidden">
+              <div className="w-full h-[128px] bg-gray-200 mb-[8px] overflow-hidden relative border border-black/5">
                 <img
-                  src={`https://picsum.photos/seed/project${i}/300/200`}
-                  alt="Project"
+                  src={project.image}
+                  alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src =
+                      `https://picsum.photos/seed/${project.id}/300/200`;
+                  }}
                 />
+                {project.isPrivate && (
+                  <div className="absolute top-0 right-0 bg-red-600 text-white text-[10px] px-[4px] py-[2px] font-bold">
+                    PRIVATE
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-[12px]">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="xp-button-gradient text-white px-[12px] py-[4px] rounded-sm text-[12px] font-bold shadow-md hover:scale-105 transition-transform"
+                  >
+                    Open Demo
+                  </a>
+                </div>
               </div>
-              <h3 className="font-bold text-xp-blue-dark">Project Alpha {i}</h3>
-              <p className="text-[12px] opacity-70 mb-[8px]">
-                Built with React and Tailwind CSS
+              <h3 className="font-bold text-xp-blue-dark text-[15px]">
+                {project.title}
+              </h3>
+              <p className="text-[11px] text-xp-green font-bold mb-[4px]">
+                {project.language} • {project.year}
               </p>
-              <div className="flex gap-[8px]">
-                <ExternalLink size={14} className="text-xp-blue" />
-                <Github size={14} className="text-gray-600" />
+              <p className="text-[12px] mb-[12px] flex-1 line-clamp-3">
+                {project.description}
+              </p>
+              <div className="flex items-center justify-between mt-auto pt-[8px] border-t border-black/5">
+                <span className="text-[11px] opacity-60 italic">
+                  {project.role}
+                </span>
+                <div className="flex gap-[12px]">
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-[4px] text-xp-blue hover:underline text-[12px] font-bold"
+                    >
+                      <ExternalLink size={14} />
+                      <span>Open</span>
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-[4px] text-gray-600 hover:text-xp-blue transition-colors text-[12px] font-medium"
+                      title="View Source Code"
+                    >
+                      <Github size={16} />
+                      <span>GitHub</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
@@ -299,32 +350,58 @@ export default function Home() {
         onFocus={() => focusWindow("contact")}
         icon={<Mail size={14} />}
       >
-        <form className="space-y-[16px]" onSubmit={(e) => e.preventDefault()}>
-          <div className="flex flex-col gap-[4px]">
-            <label className="text-[12px] font-bold">To:</label>
-            <div className="border border-black/20 p-[4px] bg-gray-50 text-[12px]">
-              developer@portfolio.xp
+        <div className="space-y-[24px]">
+          <div className="grid grid-cols-1 gap-[12px]">
+            {contactLinks.map((link, idx) => (
+              <a
+                key={idx}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-[12px] p-[12px] border border-black/10 hover:bg-xp-blue hover:text-white transition-colors group"
+              >
+                <div className="w-[32px] h-[32px] flex items-center justify-center">
+                  {link.name === "Email" && <Mail size={24} />}
+                  {link.name === "GitHub" && <Github size={24} />}
+                  {link.name === "Instagram" && <Instagram size={24} />}
+                </div>
+                <div>
+                  <p className="font-bold text-[14px]">{link.name}</p>
+                  <p className="text-[11px] opacity-60 group-hover:text-white/80">
+                    {link.href}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <form
+            className="space-y-[16px] pt-[16px] border-t border-black/10"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <p className="text-[12px] font-bold text-xp-blue-dark">
+              Quick Message:
+            </p>
+            <div className="flex flex-col gap-[4px]">
+              <label className="text-[12px] font-bold">Subject:</label>
+              <input
+                type="text"
+                className="border border-black/20 p-[4px] text-[12px] focus:outline-xp-blue"
+                placeholder="Hello!"
+              />
             </div>
-          </div>
-          <div className="flex flex-col gap-[4px]">
-            <label className="text-[12px] font-bold">Subject:</label>
-            <input
-              type="text"
-              className="border border-black/20 p-[4px] text-[12px] focus:outline-xp-blue"
-              placeholder="Hello!"
-            />
-          </div>
-          <div className="flex flex-col gap-[4px]">
-            <label className="text-[12px] font-bold">Message:</label>
-            <textarea
-              className="border border-black/20 p-[8px] text-[12px] h-[128px] focus:outline-xp-blue resize-none"
-              placeholder="Write your message here..."
-            ></textarea>
-          </div>
-          <button className="xp-button-gradient text-white px-[24px] py-[8px] rounded-sm font-bold text-[14px] shadow-md hover:brightness-110 active:brightness-90">
-            Send Message
-          </button>
-        </form>
+            <div className="flex flex-col gap-[4px]">
+              <label className="text-[12px] font-bold">Message:</label>
+              <textarea
+                className="border border-black/20 p-[8px] text-[12px] h-[100px] focus:outline-xp-blue resize-none"
+                placeholder="Write your message here..."
+              ></textarea>
+            </div>
+            <button className="xp-button-gradient text-white px-[24px] py-[8px] rounded-sm font-bold text-[14px] shadow-md hover:brightness-110 active:brightness-90 w-full">
+              Send Message
+            </button>
+          </form>
+        </div>
       </Window>
 
       {/* Start Menu */}
@@ -333,6 +410,7 @@ export default function Home() {
         onItemClick={(id) => openWindow(id)}
       />
 
+      {/* Taskbar */}
       <Taskbar
         openWindows={windows
           .filter((w) => w.isOpen)
