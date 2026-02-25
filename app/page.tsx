@@ -12,6 +12,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { Window } from "@/components/Window";
+
 import { Taskbar } from "@/components/Taskbar";
 import { StartMenu } from "@/components/StartMenu";
 import { DesktopIcon } from "@/components/DesktopIcon";
@@ -183,14 +184,14 @@ export default function Home() {
       >
         <div className="space-y-[16px]">
           <h1 className="text-[24px] font-bold border-b pb-[8px]">
-            Hello, I'm a Web Developer
+            Hello, Im a Web Developer
           </h1>
           <p>
-            Welcome to my Windows XP themed portfolio! I'm a passionate
-            developer who loves building nostalgic yet modern web experiences.
+            Welcome to my Windows XP themed portfolio! Im a passionate developer
+            who loves building nostalgic yet modern web experiences.
           </p>
           <div className="bg-[#ffffcc] p-[16px] border border-black/10 shadow-sm italic">
-            "The best way to predict the future is to invent it." - Alan Kay
+            The best way to predict the future is to invent it. - Alan Kay
           </div>
           <p>
             I specialize in React, TypeScript, and Tailwind CSS. I enjoy the
@@ -332,7 +333,6 @@ export default function Home() {
         onItemClick={(id) => openWindow(id)}
       />
 
-      {/* Taskbar */}
       <Taskbar
         openWindows={windows
           .filter((w) => w.isOpen)
