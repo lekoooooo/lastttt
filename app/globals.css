@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: "Tahoma", "Segoe UI", sans-serif;
+  --color-xp-blue: #245edb;
+  --color-xp-blue-light: #3c81f3;
+  --color-xp-blue-dark: #1c46a8;
+  --color-xp-green: #3c9d3c;
+  --color-xp-orange: #f48420;
+  --color-xp-taskbar: #245edb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply overflow-hidden bg-[#008080] font-sans;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.xp-window-shadow {
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.xp-button-gradient {
+  background: linear-gradient(to bottom, #3c81f3 0%, #245edb 100%);
+}
+
+.xp-taskbar-gradient {
+  background: linear-gradient(to bottom, #245edb 0%, #1c46a8 100%);
+}
+
+.xp-start-button {
+  background: linear-gradient(to bottom, #3c9d3c 0%, #248b24 100%);
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.xp-title-bar {
+  background: linear-gradient(to right, #245edb 0%, #3c81f3 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
