@@ -361,15 +361,7 @@
 //                   <p className="text-[11px] opacity-60 group-hover:text-white/80">
 //                     {link.href}
 //                   </p>
-//                 </div>
-//               </a>
-//             ))}
-//           </div>
-
-//           <form
-//             className="space-y-[16px] pt-[16px] border-t border-black/10"
-//             onSubmit={(e) => e.preventDefault()}
-//           >
+//
 //             <p className="text-[12px] font-bold text-xp-blue-dark">
 //               Quick Message:
 //             </p>
