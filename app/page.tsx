@@ -362,27 +362,6 @@
 //                     {link.href}
 //                   </p>
 //
-//             <p className="text-[12px] font-bold text-xp-blue-dark">
-//               Quick Message:
-//             </p>
-//             <div className="flex flex-col gap-[4px]">
-//               <label className="text-[12px] font-bold">Subject:</label>
-//               <input
-//                 type="text"
-//                 className="border border-black/20 p-[4px] text-[12px] focus:outline-xp-blue"
-//                 placeholder="Hello!"
-//               />
-//             </div>
-//             <div className="flex flex-col gap-[4px]">
-//               <label className="text-[12px] font-bold">Message:</label>
-//               <textarea
-//                 className="border border-black/20 p-[8px] text-[12px] h-[100px] focus:outline-xp-blue resize-none"
-//                 placeholder="Write your message here..."
-//               ></textarea>
-//             </div>
-//             <button className="xp-button-gradient text-white px-[24px] py-[8px] rounded-sm font-bold text-[14px] shadow-md hover:brightness-110 active:brightness-90 w-full">
-//               Send Message
-//             </button>
 //           </form>
 //         </div>
 //       </Window>
