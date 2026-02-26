@@ -370,14 +370,7 @@
 //       <StartMenu
 //         isOpen={isStartMenuOpen}
 //         onItemClick={(id) => openWindow(id)}
-//       />
 
-//       {/* Taskbar */}
-//       <Taskbar
-//         openWindows={windows
-//           .filter((w) => w.isOpen)
-//
-// }
 "use client";
 
 import React, { useState, useCallback, useRef } from "react";
