@@ -339,37 +339,6 @@
 //       <Window
 //         id="contact"
 //         title="Contact Me - Outlook Express"
-//         isOpen={
-//           (windows.find((w) => w.id === "contact")?.isOpen &&
-//             !windows.find((w) => w.id === "contact")?.isMinimized) ||
-//           false
-//         }
-//         onClose={() => closeWindow("contact")}
-//         onMinimize={() => minimizeWindow("contact")}
-//         zIndex={windows.find((w) => w.id === "contact")?.zIndex || 10}
-//         onFocus={() => focusWindow("contact")}
-//         icon={<Mail size={14} />}
-//       >
-//               >
-//                 <div className="w-[32px] h-[32px] flex items-center justify-center">
-//                   {link.name === "Email" && <Mail size={24} />}
-//                   {link.name === "GitHub" && <Github size={24} />}
-//                   {link.name === "Instagram" && <Instagram size={24} />}
-//                 </div>
-//                 <div>
-//                   <p className="font-bold text-[14px]">{link.name}</p>
-//                   <p className="text-[11px] opacity-60 group-hover:text-white/80">
-//                     {link.href}
-//                   </p>
-//
-//           </form>
-//         </div>
-//       </Window>
-
-//       {/* Start Menu */}
-//       <StartMenu
-//         isOpen={isStartMenuOpen}
-//         onItemClick={(id) => openWindow(id)}
 
 "use client";
 
