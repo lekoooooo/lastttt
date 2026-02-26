@@ -350,15 +350,6 @@
 //         onFocus={() => focusWindow("contact")}
 //         icon={<Mail size={14} />}
 //       >
-//         <div className="space-y-[24px]">
-//           <div className="grid grid-cols-1 gap-[12px]">
-//             {contactLinks.map((link, idx) => (
-//               <a
-//                 key={idx}
-//                 href={link.href}
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 className="flex items-center gap-[12px] p-[12px] border border-black/10 hover:bg-xp-blue hover:text-white transition-colors group"
 //               >
 //                 <div className="w-[32px] h-[32px] flex items-center justify-center">
 //                   {link.name === "Email" && <Mail size={24} />}
