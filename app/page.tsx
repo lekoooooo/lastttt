@@ -376,14 +376,7 @@
 //       <Taskbar
 //         openWindows={windows
 //           .filter((w) => w.isOpen)
-//           .map((w) => ({ id: w.id, title: w.title, icon: w.icon }))}
-//         activeWindowId={activeWindowId}
-//         onWindowClick={handleTaskbarClick}
-//         onStartClick={() => setIsStartMenuOpen(!isStartMenuOpen)}
-//         isStartMenuOpen={isStartMenuOpen}
-//       />
-//     </main>
-//   );
+//
 // }
 "use client";
 
