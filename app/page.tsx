@@ -142,19 +142,6 @@
 //     >
 //       {/* Desktop Icons */}
 //       <div className="absolute top-[16px] left-[16px] flex flex-col gap-[16px]">
-//         <DesktopIcon
-//           id="about"
-//           title="My Profile"
-//           icon={<User />}
-//           onClick={() => openWindow("about")}
-//         />
-//         <DesktopIcon
-//           id="projects"
-//           title="Projects"
-//           icon={<Folder />}
-//           onClick={() => openWindow("projects")}
-//         />
-//         <DesktopIcon
 
 "use client";
 
