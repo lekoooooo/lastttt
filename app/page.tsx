@@ -122,26 +122,6 @@
 //   const handleTaskbarClick = useCallback(
 //     (id: string) => {
 //       const win = windows.find((w) => w.id === id);
-//       if (win?.isMinimized || activeWindowId !== id) {
-//         focusWindow(id);
-//       } else {
-//         minimizeWindow(id);
-//       }
-//     },
-//     [windows, activeWindowId, focusWindow, minimizeWindow],
-//   );
-
-//   return (
-//     <main
-//       className="h-screen w-screen relative overflow-hidden bg-cover bg-center"
-//       style={{
-//         backgroundImage:
-//           'url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2048")',
-//       }}
-//       onClick={() => setIsStartMenuOpen(false)}
-//     >
-//       {/* Desktop Icons */}
-//       <div className="absolute top-[16px] left-[16px] flex flex-col gap-[16px]">
 
 "use client";
 
