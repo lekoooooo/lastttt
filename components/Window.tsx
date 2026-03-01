@@ -34,24 +34,7 @@
 //             <span className="cursor-default hover:bg-xp-blue hover:text-white px-[4px]">
 //               Edit
 //             </span>
-//             <span className="cursor-default hover:bg-xp-blue hover:text-white px-[4px]">
-//               View
-//             </span>
-//             <span className="cursor-default hover:bg-xp-blue hover:text-white px-[4px]">
-//               Help
-//             </span>
-//           </div>
-//           <div className="flex-1 overflow-auto bg-white m-[4px] border border-black/20 p-[16px] font-sans text-[14px]">
-//             {children}
-//           </div>
-//           <div className="bg-[#ece9d8] h-[20px] border-t border-black/10 px-[8px] text-[10px] flex items-center">
-//             <span>Ready</span>
-//           </div>
-//         </motion.div>
-//       )}
-//     </AnimatePresence>
-//   );
-// };
+//
 "use client";
 
 import React from "react";
