@@ -1,35 +1,3 @@
-//     {
-//       id: "skills",
-//       title: "Technical Skills",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <Code size={16} />,
-//     },
-//     {
-//       id: "contact",
-//       title: "Contact Me",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <Mail size={16} />,
-//     },
-//   ]);
-
-//   const [maxZIndex, setMaxZIndex] = useState(10);
-//   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
-//   const [activeWindowId, setActiveWindowId] = useState<string | null>(null);
-
-//   const openWindow = useCallback(
-//     (id: string) => {
-//       setWindows((prev) =>
-//         prev.map((win) => {
-//           if (win.id === id) {
-//             const newZ = maxZIndex + 1;
-//             setMaxZIndex(newZ);
-//             setActiveWindowId(id);
-//             return { ...win, isOpen: true, isMinimized: false, zIndex: newZ };
-//           }
 //           return win;
 //         }),
 //       );
