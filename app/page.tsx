@@ -1,30 +1,3 @@
-// interface WindowState {
-//   id: string;
-//   title: string;
-//   isOpen: boolean;
-//   isMinimized: boolean;
-//   zIndex: number;
-//   icon: React.ReactNode;
-// }
-
-// export default function Home() {
-//   const [windows, setWindows] = useState<WindowState[]>([
-//     {
-//       id: "about",
-//       title: "About Me",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <User size={16} />,
-//     },
-//     {
-//       id: "projects",
-//       title: "My Projects",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <Folder size={16} />,
-//     },
 //     {
 //       id: "skills",
 //       title: "Technical Skills",
