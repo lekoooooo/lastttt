@@ -47,13 +47,6 @@
 //   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
 //   const [activeWindowId, setActiveWindowId] = useState<string | null>(null);
 
-//   const openWindow = useCallback(
-//     (id: string) => {
-//       setWindows((prev) =>
-//         prev.map((win) => {
-//           if (win.id === id) {
-//             const newZ = maxZIndex + 1;
-
 "use client";
 
 import React, { useState, useCallback, useRef } from "react";
@@ -200,7 +193,6 @@ export default function Home() {
       }}
       onClick={() => setIsStartMenuOpen(false)}
     >
-      {/* Desktop Icons */}
       <div className="absolute top-[24px] left-[24px] flex flex-col gap-[32px] z-0">
         <DesktopIcon
           id="about"
@@ -231,8 +223,6 @@ export default function Home() {
           dragConstraints={constraintsRef}
         />
       </div>
-
-      {/* Windows */}
       <Window
         id="about"
         title="About Me - Notepad"
