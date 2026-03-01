@@ -1,40 +1,3 @@
-// "use client";
-
-// import React from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { X, Minus, Square } from "lucide-react";
-
-// interface WindowProps {
-//   id: string;
-//   title: string;
-//   isOpen: boolean;
-//   onClose: () => void;
-//   onMinimize: () => void;
-//   children: React.ReactNode;
-//   zIndex: number;
-//   onFocus: () => void;
-//   icon?: React.ReactNode;
-
-//
-//
-//                 onClick={(e) => {
-//                   e.stopPropagation();
-//                   onClose();
-//                 }}
-//                 className="w-[21px] h-[21px] bg-[#e81123] border border-white/40 rounded-[2px] flex items-center justify-center hover:brightness-110 active:brightness-90"
-//               >
-//                 <X size={14} className="text-white" />
-//               </button>
-//             </div>
-//           </div>
-//           <div className="bg-[#ece9d8] border-b border-black/10 px-[8px] py-[2px] text-[11px] flex gap-[12px]">
-//             <span className="cursor-default hover:bg-xp-blue hover:text-white px-[4px]">
-//               File
-//             </span>
-//             <span className="cursor-default hover:bg-xp-blue hover:text-white px-[4px]">
-//               Edit
-//             </span>
-//
 "use client";
 
 import React from "react";
@@ -53,7 +16,6 @@ interface WindowProps {
   icon?: React.ReactNode;
   dragConstraints?: React.RefObject<HTMLDivElement>;
 }
-
 export const Window: React.FC<WindowProps> = ({
   id,
   title,
