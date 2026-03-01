@@ -14,17 +14,7 @@
 //   zIndex: number;
 //   onFocus: () => void;
 //   icon?: React.ReactNode;
-// }
 
-// export const Window: React.FC<WindowProps> = ({
-//   id,
-//   title,
-//   isOpen,
-//   onClose,
-//   onMinimize,
-//   children,
-//   zIndex,
-//   onFocus,
 //   icon,
 // }) => {
 //   return (
