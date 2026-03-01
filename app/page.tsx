@@ -1,23 +1,3 @@
-// "use client";
-
-// import React, { useState, useCallback } from "react";
-// import {
-//   User,
-//   Folder,
-//   Mail,
-//   Code,
-//   Github,
-//   ExternalLink,
-//   Terminal,
-//   Instagram,
-// } from "lucide-react";
-// import { Window } from "@/components/Window";
-// import { Taskbar } from "@/components/Taskbar";
-// import { StartMenu } from "@/components/StartMenu";
-// import { DesktopIcon } from "@/components/DesktopIcon";
-// import { experiences, contactLinks } from "@/lib/data";
-// import { projects } from "@/lib/projects";
-
 // interface WindowState {
 //   id: string;
 //   title: string;
