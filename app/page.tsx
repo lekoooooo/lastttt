@@ -1,23 +1,3 @@
-// "use client";
-
-// import React, { useState, useCallback } from "react";
-// import {
-//   User,
-//   Folder,
-//   Mail,
-//   Code,
-//   Github,
-//   ExternalLink,
-//   Terminal,
-//   Instagram,
-// } from "lucide-react";
-// import { Window } from "@/components/Window";
-// import { Taskbar } from "@/components/Taskbar";
-// import { StartMenu } from "@/components/StartMenu";
-// import { DesktopIcon } from "@/components/DesktopIcon";
-// import { experiences, contactLinks } from "@/lib/data";
-// import { projects } from "@/lib/projects";
-
 // interface WindowState {
 //   id: string;
 //   title: string;
@@ -73,55 +53,6 @@
 //         prev.map((win) => {
 //           if (win.id === id) {
 //             const newZ = maxZIndex + 1;
-//             setMaxZIndex(newZ);
-//             setActiveWindowId(id);
-//             return { ...win, isOpen: true, isMinimized: false, zIndex: newZ };
-//           }
-//           return win;
-//         }),
-//       );
-//       setIsStartMenuOpen(false);
-//     },
-//     [maxZIndex],
-//   );
-
-//   const closeWindow = useCallback(
-//     (id: string) => {
-//       setWindows((prev) =>
-//         prev.map((win) => (win.id === id ? { ...win, isOpen: false } : win)),
-//       );
-//       if (activeWindowId === id) setActiveWindowId(null);
-//     },
-//     [activeWindowId],
-//   );
-
-//   const minimizeWindow = useCallback((id: string) => {
-//     setWindows((prev) =>
-//       prev.map((win) => (win.id === id ? { ...win, isMinimized: true } : win)),
-//     );
-//     setActiveWindowId(null);
-//   }, []);
-
-//   const focusWindow = useCallback(
-//     (id: string) => {
-//       setWindows((prev) =>
-//         prev.map((win) => {
-//           if (win.id === id) {
-//             const newZ = maxZIndex + 1;
-//             setMaxZIndex(newZ);
-//             setActiveWindowId(id);
-//             return { ...win, isMinimized: false, zIndex: newZ };
-//           }
-//           return win;
-//         }),
-//       );
-//     },
-//     [maxZIndex],
-//   );
-
-//   const handleTaskbarClick = useCallback(
-//     (id: string) => {
-//       const win = windows.find((w) => w.id === id);
 
 "use client";
 
