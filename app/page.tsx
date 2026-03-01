@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useCallback, useRef } from "react";
 import {
   User,
@@ -410,14 +411,10 @@ export default function Home() {
           </form>
         </div>
       </Window>
-
-      {/* Start Menu */}
       <StartMenu
         isOpen={isStartMenuOpen}
         onItemClick={(id) => openWindow(id)}
       />
-
-      {/* Taskbar */}
       <Taskbar
         openWindows={windows
           .filter((w) => w.isOpen)

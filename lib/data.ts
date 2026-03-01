@@ -15,9 +15,21 @@ export const experiences: Experience[] = [
   {
     role: "Fullstack Intern",
     company: "Re-educate",
-    date: "Oct 2024 – Present",
+    date: "Oct 2024 – Dec 2025",
     description:
       "Contributed to the front-end development of client projects, writing reusable components and improving UI consistency across web apps.",
+  },
+  {
+    role: "Fullstack Developer",
+    company: "Unilab",
+    date: "Mar 2025 – Jun 2025",
+    description: "Contributed to the front-end development of client projects",
+  },
+  {
+    role: "Digital Product Testing & QA —",
+    company: "Commschool / GITA",
+    date: "Jun 2025 – Oct 2025",
+    description: "QA",
   },
 ];
 

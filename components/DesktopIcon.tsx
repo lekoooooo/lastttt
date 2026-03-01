@@ -8,7 +8,7 @@ interface DesktopIconProps {
   title: string;
   icon: React.ReactNode;
   onClick: () => void;
-  dragConstraints?: React.RefObject<HTMLDivElement>;
+  dragConstraints?: React.RefObject<HTMLDivElement | null>;
 }
 
 export const DesktopIcon: React.FC<DesktopIconProps> = ({
