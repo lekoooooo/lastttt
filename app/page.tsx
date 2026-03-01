@@ -1,12 +1,3 @@
-// interface WindowState {
-//   id: string;
-//   title: string;
-//   isOpen: boolean;
-//   isMinimized: boolean;
-//   zIndex: number;
-//   icon: React.ReactNode;
-// }
-
 import React, { useState, useCallback, useRef } from "react";
 import {
   User,
