@@ -7,20 +7,6 @@
 //   icon: React.ReactNode;
 // }
 
-// export default function Home() {
-//   const [windows, setWindows] = useState<WindowState[]>([
-//     {
-//       id: "about",
-//       title: "About Me",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <User size={16} />,
-//     },
-//     {
-//       id: "projects",
-//       title: "My Projects",
-
 import React, { useState, useCallback, useRef } from "react";
 import {
   User,
