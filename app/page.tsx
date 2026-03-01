@@ -40,12 +40,6 @@
 //       isMinimized: false,
 //       zIndex: 10,
 //       icon: <Mail size={16} />,
-//     },
-//   ]);
-
-//   const [maxZIndex, setMaxZIndex] = useState(10);
-//   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
-//   const [activeWindowId, setActiveWindowId] = useState<string | null>(null);
 
 "use client";
 
