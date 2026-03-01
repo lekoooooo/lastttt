@@ -16,40 +16,7 @@
 //   icon?: React.ReactNode;
 
 //
-//           initial={{ scale: 0.9, opacity: 0 }}
-//           animate={{ scale: 1, opacity: 1 }}
-//           exit={{ scale: 0.9, opacity: 0 }}
-//           transition={{ duration: 0.1 }}
-//           className="absolute bg-[#ece9d8] border-[3px] border-xp-blue rounded-t-[8px] overflow-hidden xp-window-shadow flex flex-col"
-//           style={{
-//             zIndex,
-//             width: "min(600px, 95vw)",
-//             height: "min(450px, 70vh)",
-//             top: "10%",
-//             left: "50%",
-//             transform: "translateX(-50%)",
-//           }}
-//           onMouseDown={onFocus}
-//         >
-//           <div className="xp-title-bar h-[30px] flex items-center justify-between px-[8px] cursor-default select-none">
-//             <div className="flex items-center gap-[8px] text-white font-bold text-[14px] drop-shadow-md">
-//               {icon}
-//               <span>{title}</span>
-//             </div>
-//             <div className="flex items-center gap-[4px]">
-//               <button
-//                 onClick={(e) => {
-//                   e.stopPropagation();
-//                   onMinimize();
-//                 }}
-//                 className="w-[21px] h-[21px] bg-xp-blue border border-white/40 rounded-[2px] flex items-center justify-center hover:brightness-110 active:brightness-90"
-//               >
-//                 <Minus size={14} className="text-white" />
-//               </button>
-//               <button className="w-[21px] h-[21px] bg-xp-blue border border-white/40 rounded-[2px] flex items-center justify-center hover:brightness-110 active:brightness-90">
-//                 <Square size={10} className="text-white" />
-//               </button>
-//               <button
+//
 //                 onClick={(e) => {
 //                   e.stopPropagation();
 //                   onClose();
