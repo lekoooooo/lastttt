@@ -20,28 +20,6 @@
 //     {
 //       id: "projects",
 //       title: "My Projects",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <Folder size={16} />,
-//     },
-//     {
-//       id: "skills",
-//       title: "Technical Skills",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <Code size={16} />,
-//     },
-//     {
-//       id: "contact",
-//       title: "Contact Me",
-//       isOpen: false,
-//       isMinimized: false,
-//       zIndex: 10,
-//       icon: <Mail size={16} />,
-
-"use client";
 
 import React, { useState, useCallback, useRef } from "react";
 import {
