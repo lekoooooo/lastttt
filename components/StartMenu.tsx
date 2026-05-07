@@ -1,28 +1,3 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  User,
-  Folder,
-  Mail,
-  Code,
-  Settings,
-  LogOut,
-  Search,
-  HelpCircle,
-} from "lucide-react";
-
-interface StartMenuProps {
-  isOpen: boolean;
-  onItemClick: (id: string) => void;
-}
-
-export const StartMenu: React.FC<StartMenuProps> = ({
-  isOpen,
-  onItemClick,
-}) => {
-  if (!isOpen) return null;
 
   const leftItems = [
     {
