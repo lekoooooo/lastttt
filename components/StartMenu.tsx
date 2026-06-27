@@ -57,6 +57,27 @@ export const StartMenu: React.FC<StartMenuProps> = ({
     { id: "help", title: "Help and Support", icon: <HelpCircle size={16} /> },
   ];
 
+  return (
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="fixed bottom-[30px] left-0 w-[380px] bg-white rounded-t-[8px] overflow-hidden shadow-2xl z-[9998] border-2 border-xp-blue"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Header */}
+      <div className="xp-title-bar h-[60px] flex items-center px-[16px] gap-[12px]">
+        <div className="w-[40px] h-[40px] bg-white rounded-[4px] border-2 border-white/50 flex items-center justify-center overflow-hidden">
+          <img
+            src="https://picsum.photos/seed/user/40/40"
+            alt="User"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <span className="text-white font-bold text-[18px] drop-shadow-md">
+          Guest User
+        </span>
+      </div>
+
       <div className="flex h-[350px]">
         <div className="flex-1 bg-white p-[8px] flex flex-col gap-[4px]">
           {leftItems.map((item) => (
