@@ -60,21 +60,3 @@ export const Taskbar: React.FC<TaskbarProps> = ({
           </button>
         ))}
       </div>
-
-      <div className="h-full bg-[#0997ff] border-l border-white/20 px-[12px] flex items-center gap-[12px] text-white text-[12px] font-medium">
-        <div className="flex items-center gap-[8px] opacity-80">
-          <Monitor size={12} />
-          <Code size={12} />
-        </div>
-        <div className="flex flex-col items-center leading-none">
-          <span>
-            {time.toLocaleTimeString([], {
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
