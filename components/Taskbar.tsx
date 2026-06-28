@@ -38,11 +38,7 @@ export const Taskbar: React.FC<TaskbarProps> = ({
         }}
         className={`xp-start-button h-full px-[16px] flex items-center gap-[8px] rounded-r-[12px] italic font-black text-white text-[18px] shadow-lg transition-all hover:brightness-110 active:brightness-90 ${isStartMenuOpen ? "brightness-90" : ""}`}
       >
-        <div className="bg-white/20 p-[2px] rounded-full">
-          <Monitor size={16} fill="white" className="text-white" />
-        </div>
-        <span className="drop-shadow-md">start</span>
-      </button>
+
 
       <div className="flex-1 flex items-center gap-[4px] px-[8px] overflow-x-auto no-scrollbar">
         {openWindows.map((win) => (
