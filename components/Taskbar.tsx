@@ -44,23 +44,6 @@ export const Taskbar: React.FC<TaskbarProps> = ({
         <span className="drop-shadow-md">start</span>
       </button>
 
-      <div className="flex-1 flex items-center gap-[4px] px-[8px] overflow-x-auto no-scrollbar">
-        {openWindows.map((win) => (
-          <button
-            key={win.id}
-            onClick={() => onWindowClick(win.id)}
-            className={`h-[24px] min-w-[120px] max-w-[160px] px-[8px] flex items-center gap-[8px] rounded-[2px] text-[12px] text-white border transition-all ${
-              activeWindowId === win.id
-                ? "bg-xp-blue-dark border-white/30 shadow-inner"
-                : "bg-xp-blue-light border-white/10 hover:bg-xp-blue"
-            }`}
-          >
-            <div className="shrink-0">{win.icon}</div>
-            <span className="truncate">{win.title}</span>
-          </button>
-        ))}
-      </div>
-
       <div className="h-full bg-[#0997ff] border-l border-white/20 px-[12px] flex items-center gap-[12px] text-white text-[12px] font-medium">
         <div className="flex items-center gap-[8px] opacity-80">
           <Monitor size={12} />
