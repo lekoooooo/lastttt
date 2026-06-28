@@ -4,6 +4,14 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { User, Folder, Mail, Code, Monitor } from "lucide-react";
 
+interface TaskbarProps {
+  openWindows: { id: string; title: string; icon: React.ReactNode }[];
+  activeWindowId: string | null;
+  onWindowClick: (id: string) => void;
+  onStartClick: () => void;
+  isStartMenuOpen: boolean;
+}
+
 export const Taskbar: React.FC<TaskbarProps> = ({
   openWindows,
   activeWindowId,
