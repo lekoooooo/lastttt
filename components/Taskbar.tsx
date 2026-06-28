@@ -1,3 +1,9 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { User, Folder, Mail, Code, Monitor } from "lucide-react";
+
 interface TaskbarProps {
   openWindows: { id: string; title: string; icon: React.ReactNode }[];
   activeWindowId: string | null;
